@@ -4,16 +4,30 @@
     <meta charset="UTF-8" />
     <title>Календурь</title>
     <style>
-      table,
-      table * {
-        border: 1px solid #000;
-        /*margin: 10px;
-        padding: 5px;*/
+      table {
+        width: 100%;
       }
-      span,
+      td {
+        padding: 8px 100px 4em 8px;
+      }
+      tbody * {
+        border-top: 1px solid black;
+        border-right: 1px solid black;
+      }
+      thead * {
+        border-right: 1px solid black;
+      }
+
       h1 {
-        border: none;
+        text-align: center;
         margin: 10px 20px 15px 20px;
+      }
+      .month {
+        position: left;
+      }
+      .year {
+        text-align: right;
+        color: red;
       }
       .old,
       .new {
@@ -23,50 +37,24 @@
       .holidays {
         color: red;
       }
-      td {
-        padding: 0em 6em 3em 0em;
+      .headr * {
+        border: 0px;
+        padding: 0em 1em 0em 1em;
       }
-
-      /* Этот слиль изпремера MDN*/
-      /* table,
-      th,
-      td {
-        border: 1px solid;
+      .headr {
+        min-width: 875px;
       }
-
-      table {
-        width: 100%;
-
-        margin: 0 auto;
-        display: block;
-        overflow-x: auto;
-        border-spacing: 0;
-      }
-
-      tbody {
-        white-space: nowrap;
-      }
-
-      th,
-      td {
-        padding: 5px 10px;
-        border-top-width: 0;
-        border-left-width: 0;
-      }
-
-      th {
-        position: sticky;
-        top: 0;
-        background: #fff;
-        vertical-align: bottom;
-      } */
     </style>
   </headr>
   <body>
-    <table>
-      <caption>
-        <h1><span>Пянварь</span> <span>Календурь</span><span>2022</span></h1>
-      </caption>
+    <table class="headr">
+      <tr>
+        <td class="month"><h2>Пянварь</h2></td>
+        <td><h1>Календурь</h1></td>
+        <td class="year"><h2>2022</h2></td>
+      </tr>
+    </table>
+    <table cellspacing="0">
       <thead>
         <th>Поневольник</th>
         <th>Вздорник</th>
@@ -76,6 +64,7 @@
         <th>Своббота</th>
         <th>Раскисница</th>
       </thead>
+
       <tbody>
         <tr>
           <td class="old">27</td>
